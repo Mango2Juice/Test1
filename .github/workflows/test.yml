@@ -29,7 +29,6 @@ jobs:
           commit_message: your_message
           target_branch: main
           files: ci/test-output/out.js
-          remote_repository: https://github.com/Mango2Juice/Test1
           access_token: ${{ github.token }}
           force: true
           empty: true
