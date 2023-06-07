@@ -13,8 +13,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Overwrite file
-        uses: "DamianReeves/write-file-action@master"
+      - name: Write File
+        uses: DamianReeves/write-file-action@v1.2
         with:
           path: ci/test-output/out.js
           write-mode: overwrite
