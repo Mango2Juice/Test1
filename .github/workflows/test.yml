@@ -17,12 +17,17 @@ jobs:
         uses: DamianReeves/write-file-action@v1.2
         with:
           path: ci/test-output/out.js
-          write-mode: overwrite
+          write-mode: append
           contents: |
             console.log('some contents: ${{github.ref_name}}')
 
       - name: Checkout
-        uses: actions/checkout@v3.5.2
-
-      # [...] --> steps with actions or commands updating repository files
-      - uses: GuillaumeFalourd/git-commit-push@v1.3
+        uses: actions/checkout@v3
+      
+      - name: Git Commit Push Action
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+	with:
+          email: ${{ github.actor }}@users.noreply.github.com
+          name: ${{ github.actor }}
+          commit_message: your_message
+          target_branch: main
