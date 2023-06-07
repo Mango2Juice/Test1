@@ -22,6 +22,5 @@ jobs:
             console.log('some contents: ${{github.ref_name}}')
 
       - uses: actions/checkout@v2.3.4
-
-      - name: Git Commit Push Action
-  	uses: GuillaumeFalourd/git-commit-push@v1.3
+      # [...] --> steps with actions or commands updating repository files
+      - uses: GuillaumeFalourd/git-commit-push@v1.3
