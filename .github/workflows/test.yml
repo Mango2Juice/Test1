@@ -20,3 +20,6 @@ jobs:
           write-mode: overwrite
           contents: |
             console.log('some contents: ${{github.ref_name}}')
+
+	- name: Git Commit Push Action
+  	  uses: GuillaumeFalourd/git-commit-push@v1.3
