@@ -1,23 +1,26 @@
-name: 'Concatenate files'
-description: 'This action creates a file by concatenating the specified files.'
-author: 'nikkie'
+name: "Write File"
+author: "Damian Reeves"
+description: "Write a file."
 inputs:
-  sources:
-    description: 'A string which represents paths of concatenated files.'
+  path: # id of input
+    description: "The path to the file to write"
     required: true
-  destination:
-    description: 'Path to the created file.'
+
+  contents:
+    description: "The contents of the file"
     required: true
+
+  write-mode:
+    description: "The mode of writing to use: `overwrite`, `append`, or `preserve`."
+    required: false
+    default: preserve
+outputs:
+  size:
+    description: "The returned size"
+
 runs:
-  using: composite
-  steps:
-  - run: |
-      ${GITHUB_ACTION_PATH}/entrypoint.sh ${SOURCES} ${DESTINATION}
-    env:
-      # workaround ref: https://github.com/actions/runner/issues/665#issuecomment-699481628
-      SOURCES: ${{ inputs.sources }}
-      DESTINATION: ${{ inputs.destination }}
-    shell: bash
+  using: "node16"
+  main: "dist/index.js"
 branding:
-  icon: 'file-text'
-  color: 'green'
+  icon: "package"
+  color: "gray-dark"
