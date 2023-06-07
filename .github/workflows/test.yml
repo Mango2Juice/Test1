@@ -22,7 +22,7 @@ jobs:
             console.log('some contents: ${{github.ref_name}}')
 
       - name: Checkout
-      uses: actions/checkout@v3.5.2
+        uses: actions/checkout@v3.5.2
 
       # [...] --> steps with actions or commands updating repository files
       - uses: GuillaumeFalourd/git-commit-push@v1.3
