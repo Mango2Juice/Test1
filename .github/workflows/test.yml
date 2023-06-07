@@ -27,9 +27,3 @@ jobs:
           email: ${{ github.actor }}@users.noreply.github.com
           name: ${{ github.actor }}
           commit_message: your_message
-          target_branch: main
-          files: ci/test-output/out.js
-          access_token: ${{ github.token }}
-          force: true
-          empty: true
-          tags: true
