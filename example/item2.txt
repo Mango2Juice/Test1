@@ -1,2 +1,7 @@
-Spam
-Lorem ipsum dolor sit amet
+inputs:
+  sources:
+    description: 'A string which represents paths of concatenated files.'
+    required: true
+  destination:
+    description: 'Path to the created file.'
+    required: true
