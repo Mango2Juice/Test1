@@ -23,3 +23,14 @@ jobs:
       
       - name: Git Commit Push Action
         uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          email: ${{ github.actor }}@users.noreply.github.com
+          name: ${{ github.actor }}
+          commit_message: your_message
+          target_branch: main
+          #files: file1 file2 directory1 directory2/file3
+          remote_repository: https://github.com/Mango2Juice/Test1
+          access_token: ${{ github.token }}
+          force: true
+          empty: true
+          tags: true
