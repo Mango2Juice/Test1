@@ -19,11 +19,8 @@ jobs:
         uses: actions/checkout@v3.5.2
 
       - name: Concatenate files
-        run: ./entrypoint.sh ${SOURCES} ${DESTINATION}
-           env:
-             SOURCES: ${{ inputs.sources }}
-             DESTINATION: ${{ inputs.destination }}
-           shell: bash
+        run: |
+           ./entrypoint.sh
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
