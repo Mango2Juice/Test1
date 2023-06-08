@@ -20,7 +20,10 @@ jobs:
 
       - name: Concatenate files
         run: |
-           ./well.sh
+           ./well.sh ${SOURCES} ${DESTINATION}
+        env:
+              SOURCES: test/test1.txt test/test2.txt
+              DESTINATION: test/test3.txt
 
 
       - name: Git Auto Commit
