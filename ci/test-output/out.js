@@ -1,1 +1,1 @@
-console.log('some contents: main')
+Hello World!
