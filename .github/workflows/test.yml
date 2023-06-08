@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  format-code:
     runs-on: ubuntu-latest
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -16,12 +16,12 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.5.2
 
       - name: Overwrite file
         uses: "DamianReeves/write-file-action@master"
         with:
-          path: ci/test-output/out.js
+          path: test-output/out.js
           write-mode: overwrite
           contents: |
             console.log('some contents: ${{github.ref_name}}')
