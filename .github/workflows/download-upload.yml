@@ -12,4 +12,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           url: https://staticedu-wps.cache.iciba.com/image/e1d97802b6838e37320095c20d412caa.jpg
-          dir: Download
+          dir: demo
