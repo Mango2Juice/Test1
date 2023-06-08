@@ -8,7 +8,6 @@ if [ -s "${destination}" ]; then
   rm -f -- "${destination}"
   echo "ERROR: ${destination} exists." >&2
   echo "Specify not existing file path as destination." >&2
-  exit 1
 fi
 
 for source in ${sources}
