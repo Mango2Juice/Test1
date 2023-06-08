@@ -20,7 +20,7 @@ jobs:
 
       - name: Concatenate files
         run: |
-           ./entrypoint.sh
+           ./script.sh
 
 
       - name: Git Auto Commit
