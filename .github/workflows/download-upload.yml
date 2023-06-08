@@ -11,5 +11,5 @@ jobs:
       - uses: wow-actions/download-upload@v1.1.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          url: https://staticedu-wps.cache.iciba.com/image/e1d97802b6838e37320095c20d412caa.jpg
+          url: https://raw.githubusercontent.com/wow-actions/download-upload/master/.github/workflows/download-upload.yml
           dir: demo
