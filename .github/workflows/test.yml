@@ -21,10 +21,10 @@ jobs:
       - name: Overwrite file
         uses: "DamianReeves/write-file-action@master"
         with:
-          path: test-output/out.js
+          path: ci/test-output/out.js
           write-mode: overwrite
           contents: |
-            console.log('some contents: ${{github.ref_name}}')
+            Hello World!
             
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
