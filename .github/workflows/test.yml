@@ -11,26 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.5.2
+        uses: actions/checkout@v3
 
-      - name: Write File
-        uses: DamianReeves/write-file-action@v1.2
+      - name: Overwrite file
+        uses: "DamianReeves/write-file-action@master"
         with:
-          path: test-output/out.js
+          path: ci/test-output/out.js
           write-mode: overwrite
           contents: |
-            Hello World!
-      
-      - name: Git Commit Push Action
-        uses: GuillaumeFalourd/git-commit-push@v1.3
+            console.log('some contents: ${{github.ref_name}}')
+            
+      - name: Commit & Push
+        uses: Andro999b/push@v1.3
         with:
-          email: ${{ github.actor }}@users.noreply.github.com
-          name: ${{ github.actor }}
-          commit_message: Commit performed using Push and Commit action
-          target_branch: ${{ github.ref }}
-          #files: file1 file2 directory1 directory2/file3
-          #remote_repository: https://github.com/Mango2Juice/Test1
-          #access_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
           force: true
-          #empty: true
-          #tags: true
+          message: 'Overwritten by Github Actions - ${date}'
