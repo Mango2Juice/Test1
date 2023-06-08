@@ -1,1 +1,1 @@
-Hello World!
+console.log('some contents: main')
