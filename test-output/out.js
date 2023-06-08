@@ -1,1 +1,1 @@
-ted
+console.log('some contents: main')
