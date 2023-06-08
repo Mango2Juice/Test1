@@ -26,11 +26,11 @@ jobs:
         with:
           email: ${{ github.actor }}@users.noreply.github.com
           name: ${{ github.actor }}
-          commit_message: your_message
-          target_branch: main
+          commit_message: Commit performed using Push and Commit action
+          target_branch: ${{ github.ref }}
           #files: file1 file2 directory1 directory2/file3
-          remote_repository: https://github.com/Mango2Juice/Test1
-          access_token: ${{ github.token }}
+          #remote_repository: https://github.com/Mango2Juice/Test1
+          #access_token: ${{ github.token }}
           force: true
-          empty: true
-          tags: true
+          #empty: true
+          #tags: true
