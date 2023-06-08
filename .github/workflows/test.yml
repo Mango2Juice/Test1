@@ -21,7 +21,7 @@ jobs:
 
       - name: Concatenate files
         run: |
-           ${GITHUB_ACTION_PATH}/entrypoint.sh ${SOURCES} ${DESTINATION}
+           ${github.repository}/entrypoint.sh ${SOURCES} ${DESTINATION}
            env:
              SOURCES: ${{ inputs.sources }}
              DESTINATION: ${{ inputs.destination }}
