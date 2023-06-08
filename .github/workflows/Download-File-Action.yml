@@ -11,5 +11,6 @@ jobs:
 
       - name: Download File Action
         uses: Minionguyjpro/Download-File-Action@v1
-        url: https://raw.githubusercontent.com/wow-actions/download-upload/master/.github/workflows/download-upload.yml
-        path: test
+        with:
+           url: https://raw.githubusercontent.com/wow-actions/download-upload/master/.github/workflows/download-upload.yml
+           path: test
