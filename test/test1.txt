@@ -1,0 +1,3 @@
+name: 'Concatenate files'
+description: 'This action creates a file by concatenating the specified files.'
+author: 'nikkie'

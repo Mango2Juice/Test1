@@ -1,4 +1,4 @@
-name: concatenate
+name: test
 
 on:
   push:
@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@v3.5.2
 
       - name: Concatenate files
-        uses: https://github.com/Mango2Juice/Test1@main
+        uses: Mango2Juice/Test1@main
         with:
-          sources: example/item1.txt example/item2.txt
-          destination: example/item3.txt
+          sources: test/test1.txt test/test2.txt
+          destination: test/test3.txt
 
