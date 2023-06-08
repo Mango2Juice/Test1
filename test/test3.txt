@@ -1,10 +1,4 @@
-name: 'Concatenate files'
-description: 'This action creates a file by concatenating the specified files.'
-author: 'nikkie'
-inputs:
-  sources:
-    description: 'A string which represents paths of concatenated files.'
-    required: true
-  destination:
-    description: 'Path to the created file.'
-    required: true
+I have a shell script and I want to add a line or two where it would remove a log file only if it exists. Currently my script simply does:
+I'm trying to create a script where if I file exists then perform a delete and then get a wget from artifactory. Running this code below for some reason will not delete my file and creates a new one with an extension ...example cageo.crt.1 , .2, .3, etc.
+
+When I try to debug it will show rm -f but without the file name
