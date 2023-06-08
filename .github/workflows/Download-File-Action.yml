@@ -1,22 +1,32 @@
-name: Test
-on: 
+name: test
+
+on:
   push:
+    branches: [main]
   pull_request:
-  workflow_dispatch:
+    branches: [main]
+
 jobs:
- test:
-  runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v3
-  
-  - name: Download a file
-    uses: carlosperate/download-file-action@v2
-    id: download-file
-    with:
-       file-url: 'https://github.com/carlosperate/download-file-action/archive/refs/tags/v1.0.3.tar.gz'
-       file-name: 'new_filename.tar.gz'
-       location: './new-folder-to-be-created'
-       md5: 'e3b51204dedc75588ca164a26b51610d'
-       sha256: '76ef5cf6e910a4955f713fb36cca6f90ffeee6ffafe743754716e149d68136de'
-   - name: Print the file path (new-folder-to-be-created/new_filename.tar.gz)
-     run: echo "The file was downloaded to ${{ steps.download-file.outputs.file-path }}"
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3.5.2
+
+      - name: Download a file
+        uses: carlosperate/download-file-action@v2
+        id: download-file
+        with:
+          file-url: 'https://github.com/carlosperate/download-file-action/archive/refs/tags/v1.0.3.tar.gz'
+          file-name: 'new_filename.tar.gz'
+          location: './new-folder-to-be-created'
+          md5: 'e3b51204dedc75588ca164a26b51610d'
+          sha256: '76ef5cf6e910a4955f713fb36cca6f90ffeee6ffafe743754716e149d68136de'
+      - name: Print the file path (new-folder-to-be-created/new_filename.tar.gz)
+        run: echo "The file was downloaded to ${{ steps.download-file.outputs.file-path }}"
+
