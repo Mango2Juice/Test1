@@ -1,0 +1,10 @@
+name: 'Concatenate files'
+description: 'This action creates a file by concatenating the specified files.'
+author: 'nikkie'
+inputs:
+  sources:
+    description: 'A string which represents paths of concatenated files.'
+    required: true
+  destination:
+    description: 'Path to the created file.'
+    required: true
