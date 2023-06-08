@@ -6,8 +6,6 @@ sources="${@:1:$#-1}"  # exclude the last argument
 
 if [ -s "${destination}" ]; then
   rm -f -- "${destination}"
-  echo "ERROR: ${destination} exists." >&2
-  echo "Specify not existing file path as destination." >&2
 fi
 
 for source in ${sources}
