@@ -1,3 +1,1 @@
-name: 'Concatenate files'
-description: 'This action creates a file by concatenating the specified files.'
-author: 'nikkie'
+I have a shell script and I want to add a line or two where it would remove a log file only if it exists. Currently my script simply does:
