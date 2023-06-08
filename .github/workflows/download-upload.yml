@@ -8,17 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.2
-      - name: Install
-        run: yarn
-      - name: Build
-        run: yarn build
-      - uses: bubkoo/use-app-token@v1
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.PRIVATE_KEY }}
-          env_name: bot_token
       - uses: wow-actions/download-upload@v1.1.0
         with:
-          GITHUB_TOKEN: ${{ env.bot_token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           url: https://staticedu-wps.cache.iciba.com/image/e1d97802b6838e37320095c20d412caa.jpg
           dir: Download
