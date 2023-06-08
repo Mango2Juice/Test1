@@ -23,7 +23,10 @@ jobs:
         id: download-file
         with:
           file-url: 'https://raw.githubusercontent.com/carlosperate/download-file-action/master/README.md'
-          location: 'demo'
+          file-name: 'asdasd.txt'
+          location: './new-folder-to-be-created'
+      - name: Print the file path (new-folder-to-be-created/new_filename.tar.gz)
+        run: echo "The file was downloaded to ${{ steps.download-file.outputs.file-path }}"
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
