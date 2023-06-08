@@ -22,7 +22,7 @@ jobs:
         uses: carlosperate/download-file-action@v2
         id: download-file
         with:
-          file-url: 'https://raw.githubusercontent.com/satackey/action-google-drive/master/README.md'
+          file-url: 'https://raw.githubusercontent.com/carlosperate/download-file-action/master/README.md'
           file-name: 'asdasd.txt'
           location: './new-folder-to-be-created'
       - name: Print the file path (new-folder-to-be-created/new_filename.tar.gz)
