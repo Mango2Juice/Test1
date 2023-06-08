@@ -20,3 +20,6 @@ jobs:
           sources: example/item1.txt example/item2.txt
           destination: example/item3.txt
 
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4.16.0
+
