@@ -8,11 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.2
-      - uses: bubkoo/use-app-token@v1
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.PRIVATE_KEY }}
-          env_name: bot_token
       - uses: wow-actions/download-upload@v1.1.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
