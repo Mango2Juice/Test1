@@ -13,15 +13,13 @@ jobs:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
       contents: write
-      pull-requests: write
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3.5.2
 
       - name: Concatenate files
-        run: |
-           ./entrypoint.sh ${SOURCES} ${DESTINATION}
+        run: ./entrypoint.sh ${SOURCES} ${DESTINATION}
            env:
              SOURCES: ${{ inputs.sources }}
              DESTINATION: ${{ inputs.destination }}
