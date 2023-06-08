@@ -8,19 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.2
-#      - uses: wow-actions/download-upload@v1.1.0
-#        with:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          url: https://raw.githubusercontent.com/wow-actions/download-upload/master/.github/workflows/download-upload.yml
-#          dir: demo
-
-      - uses: bubkoo/use-app-token@v1.1.0
+      - uses: wow-actions/download-upload@v1.1.0
         with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.PRIVATE_KEY }}
-          env_name: bot_token
-      - uses: ./
-        with:
-          GITHUB_TOKEN: ${{ env.bot_token }}
-          url: https://staticedu-wps.cache.iciba.com/image/e1d97802b6838e37320095c20d412caa.jpg
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://raw.githubusercontent.com/wow-actions/download-upload/master/.github/workflows/download-upload.yml
           dir: demo
