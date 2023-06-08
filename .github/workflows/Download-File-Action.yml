@@ -1,0 +1,15 @@
+name: Download File Action
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+
+      - name: Download File Action
+        uses: Minionguyjpro/Download-File-Action@v1
+        url: https://raw.githubusercontent.com/wow-actions/download-upload/master/.github/workflows/download-upload.yml
+        path: test
