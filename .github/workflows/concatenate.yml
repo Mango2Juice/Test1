@@ -1,4 +1,4 @@
-name: CI
+name: concatenate
 
 on:
   push:
@@ -17,14 +17,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3.5.2
-
-      - name: Overwrite file
-        uses: "DamianReeves/write-file-action@master"
-        with:
-          path: ci/test-output/out.js
-          write-mode: overwrite
-          contents: |
-            Hello World!
 
       - name: Concatenate files
         uses: ftnext/action-concatenate-files@v1.0.1
