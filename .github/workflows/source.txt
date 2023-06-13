@@ -1,0 +1,10 @@
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/pro.plus.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/tif.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/doh.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/hoster-onlydomains.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/anti.piracy-onlydomains.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/gambling-onlydomains.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/personal-onlydomains.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.apple.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.winoffice.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tiktok.txt
