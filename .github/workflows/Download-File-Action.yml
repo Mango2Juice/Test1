@@ -18,8 +18,22 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3.5.2
 
-      - name: Download a file
-        run: wget -i source.txt
+      - name: Set up curl
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl
+
+      - name: Read URL list
+        id: read-url-list
+        run: |
+          URLS=$(cat list/list-url.txt)
+          echo "::set-output name=urls::$URLS"
+
+      - name: Download text files
+        run: |
+          for url in ${{ steps.read-url-list.outputs.urls }}; do
+            curl -LO "$url"
+          done
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
